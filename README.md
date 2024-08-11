@@ -8,6 +8,10 @@ This tool allows you to select a portion of your screen to screenshot, runs OCR 
 - Extract text from the captured image using OCR.
 - Automatically copy the extracted text to the clipboard.
 
+## Demo
+
+[DEMO.webm](https://github.com/user-attachments/assets/153f4de5-d491-4009-b867-df39a47e9dc1)
+
 ## Dependencies
 
 - GNOME - for taking screenshots.
@@ -51,23 +55,19 @@ Run the script:
 
 To set up a custom keyboard shortcut (e.g., Win+Shift+T) to run the script, follow these steps:
 
-1. **Set the script path:**
-    ```bash
-    SCRIPT_PATH=~/textExtractor.sh
-    ```
+```bash
+# Set the script path, change to location of script
+SCRIPT_PATH=~/textExtractor.sh
 
-2. **Expand the tilde to the full path:**
-    ```bash
-    SCRIPT_PATH_EXPANDED=$(eval echo $SCRIPT_PATH)
-    ```
+# Expand the tilde to the full path:
+SCRIPT_PATH_EXPANDED=$(eval echo $SCRIPT_PATH)
 
-3. **Set the custom keyboard shortcut:**
-    ```bash
-    gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Run textExtractor.sh'
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "/bin/bash $SCRIPT_PATH_EXPANDED"
-    gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Shift><Super>T'
-    ```
+# Set the custom keyboard shortcut:
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Run textExtractor.sh'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command "/bin/bash $SCRIPT_PATH_EXPANDED"
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Shift><Super>T'
+```
 
 ## Credits
 

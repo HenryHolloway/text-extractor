@@ -33,10 +33,9 @@ This tool allows you to select a portion of your screen to screenshot, runs OCR 
     sudo pacman -S tesseract xclip
     ```
 
-2. **Clone the repository:**
+2. **Download the tool:**
     ```bash
-    git clone https://github.com/henryholloway/text-extractor.git
-    cd text-extractor 
+    wget https://github.com/HenryHolloway/text-extractor/raw/main/textExtractor.sh
     ```
 
 3. **Make the script executable:**
